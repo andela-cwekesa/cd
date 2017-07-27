@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node server.js ",
     "server": "webpack-dev-server --inline --hot ",
-    "test": "mocha "
+    "test": "./node_modules/.bin/_mocha ./test/*.js "
   },
   "author": "",
   "license": "ISC",
