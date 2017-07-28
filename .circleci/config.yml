@@ -36,3 +36,10 @@ jobs:
       - run:
           name: Running Tests
           command: npm test
+
+      - deploy:
+          name: Deploy Application
+          command: |
+            if [ "${CIRCLE_BRANCH}" == "master" ] || [ "${CIRCLE_BRANCH}" == "develop" ]; then
+              ./deploy/staging.sh
+            fi
